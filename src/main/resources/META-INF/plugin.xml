@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>com.technokratos.simpledemo</id>
+    <name>Simpledemo</name>
+    <vendor email="sales@technokratos.com" url="https://technokratos.com">Technokratos</vendor>
+    <description>Каждый день наши команды работают над продуктами, которые
+        помогают экономить и зарабатывать миллионы долларов нашим клиентам.
+    </description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <depends>org.jetbrains.android</depends>
+    <depends>com.intellij.java</depends>
+    <depends>org.jetbrains.kotlin</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="Demo notification group"
+                           displayType="BALLOON"
+                           key="custom.notification.group"/>
+    </extensions>
+
+    <actions>
+        <action id="com.technokratos.simpledemo.action.CreateDaoMethodsInsightAction"
+                class="com.technokratos.simpledemo.action.CreateDaoMethodsInsightAction" text="Create Dao Methods">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
+
